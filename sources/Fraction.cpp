@@ -23,51 +23,55 @@ namespace ariel
     void Fraction::reduce(){
     this->denominator = 1;
     }
-    Fraction operator+(const Fraction&,const Fraction&){
+    Fraction operator-(const Fraction &frac){
         return Fraction(0);
     }
-    bool operator==(const Fraction&,const Fraction&){
+    Fraction operator+(const Fraction& fraction1 ,const Fraction& fraction2 ){
+        return Fraction(0);
+    }
+    bool operator==(const Fraction& fraction1, const Fraction& fraction2 ){
         return true;
     }
-    bool operator<=(const Fraction&,const Fraction&){
+    bool operator<=(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return true;
     }
-    bool operator>=(const Fraction&,const Fraction&){
+    bool operator>=(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return true;
     }
-    bool operator<(const Fraction&,const Fraction&){
+    bool operator<(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return true;
     }
-    bool operator>(const Fraction&,const Fraction&){
+    bool operator>(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return true;
     }
-    Fraction operator-(const Fraction&,const Fraction&){
+    Fraction operator-(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return Fraction(0);
     }
-    Fraction operator*(const Fraction&,const Fraction&){
+    Fraction operator*(const Fraction& fraction1 ,const Fraction& fraction2 ){
         return Fraction(0);
     }
-    Fraction operator/(const Fraction&,const Fraction&){
+    Fraction operator/(const Fraction& fraction1 ,const Fraction& fraction2) {
         return Fraction(0);
     }
-    Fraction operator++(const Fraction&){
+    Fraction operator++(const Fraction& fraction ){
         return Fraction(0);
     }
-    Fraction operator--(const Fraction&){
+    Fraction operator--(const Fraction& fraction ){
         return Fraction(0);
     }
-    Fraction operator++(const Fraction&,int){
+    Fraction operator++(const Fraction& fraction ,int){
         return Fraction(0);
     }
-    Fraction operator--(const Fraction&,int){
+    Fraction operator--(const Fraction& fraction, int){
         return Fraction(0);
     }
-    ostream& operator<<(ostream& os, const Fraction&){
+    ostream& operator<<(ostream& os, const Fraction& fraction ){
         return os<<"default default";
     }
     istream & operator >> (istream &in,  Fraction &fraction){
-        fraction.denominator=1;
-        fraction.numerator=0;
+        in>>fraction.denominator;
+        in>>fraction.numerator;
+        return in;
     }
     
     

@@ -9,12 +9,14 @@ namespace ariel
     class Fraction
     {
     private:
-        int numerator;
-        int denominator;
+        
         void reduce();
     public:
+        int numerator;
+        int denominator;
         Fraction(int nume,int denom);
         Fraction(float number);
+        friend Fraction operator-(const Fraction &);
         friend Fraction operator+(const Fraction&,const Fraction&);
         friend bool operator==(const Fraction&,const Fraction&);
         friend bool operator<=(const Fraction&,const Fraction&);
